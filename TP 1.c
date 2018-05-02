@@ -134,64 +134,63 @@ int estadoFinal (char *cadena){
   int estadoNumero;
 
   for (estadoNumero = 0; *cadena != '\0'; cadena++) {switch (*cadena) {
-      case '0': estadoNumero = matriz [estadoNumero] [0];
-      case '1': estadoNumero = matriz [estadoNumero] [1];
-      case '2': estadoNumero = matriz [estadoNumero] [1];
-      case '3': estadoNumero = matriz [estadoNumero] [1];
-      case '5': estadoNumero = matriz [estadoNumero] [1];
-      case '6': estadoNumero = matriz [estadoNumero] [1];
-      case '7': estadoNumero = matriz [estadoNumero] [1];
-      case '8': estadoNumero = matriz [estadoNumero] [2];
-      case '9': estadoNumero = matriz [estadoNumero] [2];
-      case 'a': estadoNumero = matriz [estadoNumero] [3];
-      case 'b': estadoNumero = matriz [estadoNumero] [3];
-      case 'c': estadoNumero = matriz [estadoNumero] [3];
-      case 'd': estadoNumero = matriz [estadoNumero] [3];
-      case 'e': estadoNumero = matriz [estadoNumero] [3];
-      case 'f': estadoNumero = matriz [estadoNumero] [3];
-      case 'A': estadoNumero = matriz [estadoNumero] [3];
-      case 'B': estadoNumero = matriz [estadoNumero] [3];
-      case 'C': estadoNumero = matriz [estadoNumero] [3];
-      case 'D': estadoNumero = matriz [estadoNumero] [3];
-      case 'E': estadoNumero = matriz [estadoNumero] [3];
-      case 'F': estadoNumero = matriz [estadoNumero] [3];
-      case 'x': estadoNumero = matriz [estadoNumero] [4];
-      case 'X': estadoNumero = matriz [estadoNumero] [4];
-      case 'u': estadoNumero = matriz [estadoNumero] [5];
-      case 'U': estadoNumero = matriz [estadoNumero] [5];
-      case 'l': estadoNumero = matriz [estadoNumero] [6];
-      case 'L': estadoNumero = matriz [estadoNumero] [6];
+      case '0': estadoNumero = matriz [estadoNumero] [0]; break;
+      case '1': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '2': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '3': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '4': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '5': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '6': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '7': estadoNumero = matriz [estadoNumero] [1]; break;
+      case '8': estadoNumero = matriz [estadoNumero] [2]; break;
+      case '9': estadoNumero = matriz [estadoNumero] [2]; break;
+      case 'a': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'b': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'c': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'd': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'e': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'f': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'A': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'B': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'C': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'D': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'E': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'F': estadoNumero = matriz [estadoNumero] [3]; break;
+      case 'x': estadoNumero = matriz [estadoNumero] [4]; break;
+      case 'X': estadoNumero = matriz [estadoNumero] [4]; break;
+      case 'u': estadoNumero = matriz [estadoNumero] [5]; break;
+      case 'U': estadoNumero = matriz [estadoNumero] [5]; break;
+      case 'l': estadoNumero = matriz [estadoNumero] [6]; break;
+      case 'L': estadoNumero = matriz [estadoNumero] [6]; break;
+      default : estadoNumero = 15;
     }
   }
   return estadoNumero;
 }
-/*
-char *tipoDeEntero (char *cadena){
-  char salida[50];
+void tipoDeEntero (char *cadena) {
   switch (estadoFinal (cadena)) {
-    case 1 : salida = "Octal";
-    case 2 : salida = "Octal";
-    case 4 : salida = "Hexadecimal";
-    case 5 : salida = "Decimal";
-    case 6 : salida = "Unsigned Octal";
-    case 7 : salida = "Long Octal";
-    case 8 : salida = "Unsigned Long Octal";
-    case 9 : salida = "Unsigned Hexadecimal";
-    case 10 : salida = "Long Hexadecimal";
-    case 11 : salida = "Unsigned Long Hexadecimal";
-    case 12 : salida = "Unsigned Decimal";
-    case 13 : salida = "Long Decimal";
-    case 14 : salida = "Unsigned Long Decimal";
-//    default : salida = "ERROR";
+    case 1 : printf("%s\n", "Octal"); break;
+    case 2 : printf("%s\n", "Octal"); break;
+    case 3 : printf("%s\n", "ERROR"); break;
+    case 4 : printf("%s\n", "Hexadecimal"); break;
+    case 5 : printf("%s\n", "Decimal"); break;
+    case 6 : printf("%s\n", "Unsigned Octal"); break;
+    case 7 : printf("%s\n", "Long Octal"); break;
+    case 8 : printf("%s\n", "Unsigned Long Octal"); break;
+    case 9 : printf("%s\n", "Unsigned Hexadecimal"); break;
+    case 10 : printf("%s\n", "Long Hexadecimal"); break;
+    case 11 : printf("%s\n", "Unsigned Long Hexadecimal"); break;
+    case 12 : printf("%s\n", "Unsigned Decimal"); break;
+    case 13 : printf("%s\n", "Long Decimal"); break;
+    case 14 : printf("%s\n", "Unsigned Long Decimal"); break;
+    case 15 : printf("%s\n", "ERROR"); break;
   }
-  return salida;
-}*/
+}
 int main() {
   char numero[1024];
   scanf("%s", numero);
-//  char cadenaprueba[200] = tipoDeEntero (numero);
   printf("%u\n", estadoFinal(numero));
-//  printf("%s\n", tipoDeEntero (numero) );
+  tipoDeEntero (numero);
   getch();
   return 0;
 }
