@@ -95,9 +95,13 @@ int main() {
 	while ((ch = fgetc(punpun)) != EOF){
         printf("%c",ch);
 		printf("\n");
+		if (ch == 44){
+        	printf("hay una coma");
+        	printf("\n");
+		}
 	}
   fclose(punpun);
-  tipoDeEntero (probando);
+  //tipoDeEntero (ch);
   getch();
   return 0;
 }
