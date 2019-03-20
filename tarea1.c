@@ -88,8 +88,9 @@ void tipoDeEntero (char *cadena) {
 }
 }
 int main() {
-	char numero[1024];
 	char ch;
+	int contador = 0;
+	char num[50];
 	FILE *punpun;
 	punpun = fopen("prueba.txt","r");
 	while ((ch = fgetc(punpun)) != EOF){
@@ -98,7 +99,11 @@ int main() {
 		if (ch == 44){
         	printf("hay una coma");
         	printf("\n");
+		} else{
+				num[contador] = ch;
+				contador++;
 		}
+		printf(num);
 	}
   fclose(punpun);
   //tipoDeEntero (ch);
