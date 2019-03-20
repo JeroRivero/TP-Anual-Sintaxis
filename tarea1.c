@@ -95,10 +95,10 @@ int main() {
 	punpun = fopen("prueba.txt","r");
 	while ((ch = fgetc(punpun)) != EOF){
         printf("%c",ch);
-		printf("\n");
+		//printf("\n");
 		if (ch == 44){
-        	printf("hay una coma");
-        	printf("\n");
+        	//printf("hay una coma");
+        	//printf("\n");
         	//printf("%u\n", estadoFinal(num));
 			tipoDeEntero(num);
 			memset(num, 0, sizeof(num));
@@ -107,7 +107,7 @@ int main() {
 				num[contador] = ch;
 				contador++;
 		}
-		printf("%s",num);
+		//printf("%s",num);
 	}
   tipoDeEntero(num);
   fclose(punpun);
