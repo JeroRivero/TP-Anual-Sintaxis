@@ -109,6 +109,7 @@ int main() {
 		}
 		printf("%s",num);
 	}
+  tipoDeEntero(num);
   fclose(punpun);
   //tipoDeEntero (ch);
   getch();
