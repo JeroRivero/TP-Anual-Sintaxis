@@ -188,9 +188,14 @@ void tipoDeEntero (char *cadena) {
 }
 int main() {
   char numero[1024];
-  scanf("%s", numero);
-  printf("%u\n", estadoFinal(numero));
-  tipoDeEntero (numero);
+  int i, count = 10;
+  for (i = 0; i < count; i++) {
+    scanf("%s", numero);
+    printf("%s","Estado Final: " );
+    printf("%u\n", estadoFinal(numero));
+    printf("%s","Tipo de entero: " );
+    tipoDeEntero (numero);
+  }
   getch();
   return 0;
 }
