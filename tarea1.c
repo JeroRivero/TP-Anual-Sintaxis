@@ -1,5 +1,6 @@
 #include "conio.h"
 #include "stdio.h"
+#include "string.h"
 
 int estadoFinal (char *cadena){
   int matriz [7] [6] = {
