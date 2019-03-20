@@ -88,14 +88,23 @@ void tipoDeEntero (char *cadena) {
 }
 }
 int main() {
-  char numero[1024];
-  char probando[50];
-  FILE *punpun;
-  punpun = fopen("prueba.txt","r");
-  fscanf(punpun, "%c", probando);
+	char numero[1024];
+	char probando[50];
+	FILE *punpun;
+	punpun = fopen("prueba.txt","r");
+	while (fscanf(punpun, "%c", probando) == 1) // expect 1 successful conversion
+	{
+	  printf("%u\n", estadoFinal(probando));
+	}
+	if (feof(punpun))
+	{
+  // hit end of file
+  }
+  else
+  {
+  // some other error interrupted the read
+  }
   fclose(punpun);
-  //scanf("%s", numero);
-  printf("%u\n", estadoFinal(probando));
   tipoDeEntero (probando);
   getch();
   return 0;
