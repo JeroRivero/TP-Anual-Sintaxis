@@ -99,11 +99,15 @@ int main() {
 		if (ch == 44){
         	printf("hay una coma");
         	printf("\n");
+        	//printf("%u\n", estadoFinal(num));
+			tipoDeEntero(num);
+			memset(num, 0, sizeof(num));
+			contador = 0;
 		} else{
 				num[contador] = ch;
 				contador++;
 		}
-		printf(num);
+		printf("%s",num);
 	}
   fclose(punpun);
   //tipoDeEntero (ch);
