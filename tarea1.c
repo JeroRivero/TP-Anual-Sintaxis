@@ -44,7 +44,7 @@ int estadoFinal (char *cadena){
     matriz [6] [2] = 6,
     matriz [6] [3] = 6,
     matriz [6] [4] = 6,
-    matriz [6] [5] = 6,};
+    matriz [6] [5] = 6};
   int estadoNumero;
 
   for (estadoNumero = 0; *cadena != '\0'; cadena++) {switch (*cadena) {
@@ -85,13 +85,18 @@ void tipoDeEntero (char *cadena) {
     case 4 : printf("%s\n", "No reconocible"); break;
     case 5 : printf("%s\n", "Hexa"); break;
     case 6 : printf("%s\n", "No reconocible"); break;
-   }
+}
 }
 int main() {
   char numero[1024];
-  scanf("%s", numero);
-  printf("%u\n", estadoFinal(numero));
-  tipoDeEntero (numero);
+  char probando[50];
+  FILE *punpun;
+  punpun = fopen("prueba.txt","r");
+  fscanf(punpun, "%c", probando);
+  fclose(punpun);
+  //scanf("%s", numero);
+  printf("%u\n", estadoFinal(probando));
+  tipoDeEntero (probando);
   getch();
   return 0;
 }
