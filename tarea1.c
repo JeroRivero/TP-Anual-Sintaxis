@@ -94,12 +94,13 @@ int main() {
 	FILE *punpun;
 	punpun = fopen("prueba.txt","r");
 	while ((ch = fgetc(punpun)) != EOF){
-        printf("%c",ch);
-		printf("\n");
+        //printf("%c",ch);
+		//printf("\n");
 		if (ch == 44){
-        	printf("hay una coma");
-        	printf("\n");
-        	//printf("%u\n", estadoFinal(num));
+        	//printf("hay una coma");
+        	//printf("\n");
+        	printf(num);
+        	printf(" -> ");
 			tipoDeEntero(num);
 			memset(num, 0, sizeof(num));
 			contador = 0;
@@ -107,9 +108,10 @@ int main() {
 				num[contador] = ch;
 				contador++;
 		}
-		printf("%s",num);
+		//printf("%s",num);
 	}
-  tipoDeEntero(num);
+	printf(num);
+    printf(" -> ");  tipoDeEntero(num);
   fclose(punpun);
   //tipoDeEntero (ch);
   getch();
