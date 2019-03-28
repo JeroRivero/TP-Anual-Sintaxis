@@ -1,0 +1,16 @@
+123 -> Decimal
+071 -> Octal
+0xFF -> Hexa
+0 -> Octal
+1 -> Decimal
+08 -> No reconocible
+12A -> No reconocible
+0x -> No reconocible
+123 -> Decimal
+071 -> Octal
+0xFF -> Hexa
+0 -> Octal
+1 -> Decimal
+08 -> No reconocible
+12A -> No reconocible
+0x -> No reconocible

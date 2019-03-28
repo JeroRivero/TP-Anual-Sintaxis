@@ -78,14 +78,14 @@ int estadoFinal (char *cadena){
   }
   return estadoNumero;
 }
-void tipoDeEntero (char *cadena) {
+void tipoDeEntero (char *cadena, FILE *puntero) {
   switch (estadoFinal (cadena)) {
-    case 1 : printf("%s\n", "Decimal"); break;
-    case 2 : printf("%s\n", "Octal"); break;
-    case 3 : printf("%s\n", "Octal"); break;
-    case 4 : printf("%s\n", "No reconocible"); break;
-    case 5 : printf("%s\n", "Hexa"); break;
-    case 6 : printf("%s\n", "No reconocible"); break;
+    case 1 : fputs("Decimal\n",puntero); break;
+    case 2 : fputs("Octal\n",puntero); break;
+    case 3 : fputs("Octal\n",puntero); break;
+    case 4 : fputs("No reconocible\n",puntero); break;
+    case 5 : fputs("Hexa\n",puntero); break;
+    case 6 : fputs("No reconocible\n",puntero); break;
 }
 }
 int main() {
@@ -93,12 +93,14 @@ int main() {
 	int contador = 0;
 	char num[50];
 	FILE *punpun;
-	punpun = fopen("prueba.txt","r");
+	punpun = fopen("entrada.txt","r");
+	FILE *sachi;
+	sachi = fopen("salida.txt","w+");
 	while ((ch = fgetc(punpun)) != EOF){
 		if (ch == 44){
-        	printf(num);
-        	printf(" -> ");
-			tipoDeEntero(num);
+        	fputs(num,sachi);
+        	fputs(" -> ",sachi);
+			tipoDeEntero(num, sachi);
 			memset(num, 0, sizeof(num));
 			contador = 0;
 		} else{
@@ -108,9 +110,10 @@ int main() {
 				}
 		}
 	}
-	printf(num);
-    printf(" -> ");  
-	tipoDeEntero(num);
+	fputs(num,sachi);
+    fputs(" -> ",sachi);  
+	tipoDeEntero(num, sachi);
+	fclose(sachi);
 	fclose(punpun);
 	getch();
 	return 0;
