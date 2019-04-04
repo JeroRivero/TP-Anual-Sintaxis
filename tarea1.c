@@ -91,7 +91,7 @@ void tipoDeEntero (char *cadena, FILE *puntero) {
 int main() {
 	char ch;
 	int contador = 0;
-	char num[20];
+	char num[50] = {};
 	FILE *punpun;
 	punpun = fopen("entrada.txt","r");
 	FILE *sachi;
